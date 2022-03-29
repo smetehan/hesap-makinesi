@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class project {
+    public static void main(String[] args) {
+
+        int n1, n2, n3;
+
+        Scanner hesap = new Scanner(System.in);
+        System.out.print("ilk sayiyi giriniz :");
+        n1= hesap.nextInt();
+        System.out.print("ikinci sayiyi giriniz :");
+        n2= hesap.nextInt();
+        System.out.println("\n1 Toplama\n2 Cikarma\n3 Carpma\n4 Bolme");
+        System.out.println("Lutfen yapmak istediginiz islemi seciniz :");
+        n3=hesap.nextInt();
+
+        switch (n3) {
+            case 1:
+                System.out.print("Sonuc :"+(n1+n2));
+                break;
+            case 2:
+                System.out.print("Sonuc :"+(n1-n2));
+                break;
+            case 3:
+                System.out.print("Sonuc :"+(n1*n2));
+                break;
+            case 4:
+
+                switch (n2) {
+                    case 0:
+                        System.out.print("Bir sayi 0'a bolunemez!");
+
+                        break;
+                    default:
+                        System.out.print("Sonuc :"+(n1/n2));
+                        break;
+
+                }
+
+                break;
+                    default:
+                        System.out.print("Yanlis secim yaptiniz. Lutfen tekrar deneyiniz.");
+        }
+
+
+    }
+}
